@@ -39,7 +39,7 @@ public class TileManager {
         int y = 0;
 
         while (col < gp.maxScreenCol && row < gp.maxScreenRow){
-            g2.drawImage(tile[0].image,x,y,gp.tileSize,gp.tileSize,null);
+            g2.drawImage(tile[2].image,x,y,gp.tileSize,gp.tileSize,null);
             col++;
             x += gp.tileSize;
 
