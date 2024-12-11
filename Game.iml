@@ -6,6 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/.idea/tileRes" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/map" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/maptile" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
