@@ -4,37 +4,41 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class Player extends Entity{
-
     GamePanel gp;
     Keyb keyh;
+
+    public final int screenX;
+    public final int screenY;
 
     public Player(GamePanel gp, Keyb keyh){
         this.gp = gp;
         this.keyh = keyh;
 
+        screenX = gp.screenWidth/2 - (gp.tileSize/2);
+        screenY = gp.screenHeight/2 - (gp.tileSize/2);
+
         setDefaultValues();
         getPlayerImage();
     }
     public void setDefaultValues(){
-        x = 100;
-        y = 100;
+        worldX = gp.tileSize * 23;
+        worldY = gp.tileSize * 21;
         speed = 4;
         direction = "down";
     }
 
     public void getPlayerImage(){
-       try{
-           up1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_1.png"));
-           up2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_2.png"));
-           down1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_down_1.png"));
-           down2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_down_2.png"));
-           left1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_left_1.png"));
-           left2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_left_2.png"));
-           right1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_right_1.png"));
-           right2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_right_2.png"));
-       } catch (IOException e) {
-           e.printStackTrace();
-       }
+        try{
+            up1 = ImageIO.read(getClass().getResourceAsStream("/player/rogier4.gif"));
+
+            down1 = ImageIO.read(getClass().getResourceAsStream("/player/cowboyshoot.gif"));
+
+            left1 = ImageIO.read(getClass().getResourceAsStream("/player/player_left.gif"));
+
+            right1 = ImageIO.read(getClass().getResourceAsStream("/player/player_right.gif"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void update(){
@@ -42,17 +46,17 @@ public class Player extends Entity{
                 || keyh.leftPressed == true|| keyh.rightPressed == true){
             if(keyh.upPressed){
                 direction = "up";
-                y -= speed;
+                worldY -= speed;
 
             }else if (keyh.downPressed){
                 direction = "down";
-                y += speed;
+                worldY += speed;
             }else if (keyh.leftPressed){
                 direction = "left";
-                x -= speed;
+                worldX -= speed;
             }else if (keyh.rightPressed){
                 direction = "right";
-                x += speed;
+                worldX += speed;
             }
             spriteCounter ++;
             if(spriteCounter > 12){
@@ -114,6 +118,7 @@ public class Player extends Entity{
 
         }
 
-        g2.drawImage(image,x,y,gp.tileSize,gp.tileSize,null);
+        g2.drawImage(image,screenX,screenY,gp.tileSize,gp.tileSize,null);
     }
+
 }

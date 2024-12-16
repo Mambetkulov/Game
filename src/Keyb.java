@@ -12,23 +12,23 @@ public class Keyb  implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-       int code = e.getKeyCode();
+        int code = e.getKeyCode();
 
-       if(code == KeyEvent.VK_W){
-           upPressed = true;
+        if(code == KeyEvent.VK_W){
+            upPressed = true;
 
-       }
-       if(code == KeyEvent.VK_S){
-           downPressed = true;
+        }
+        if(code == KeyEvent.VK_S){
+            downPressed = true;
 
-       }
-       if(code == KeyEvent.VK_A){
-           leftPressed = true;
+        }
+        if(code == KeyEvent.VK_A){
+            leftPressed = true;
 
-       }
-       if(code == KeyEvent.VK_D){
-           rightPressed = true;
-       }
+        }
+        if(code == KeyEvent.VK_D){
+            rightPressed = true;
+        }
     }
 
     @Override
