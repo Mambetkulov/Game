@@ -1,6 +1,5 @@
 import javax.swing.*;
 
-
 public class Main {
    static JFrame window;
     public static void main(String[] args) {

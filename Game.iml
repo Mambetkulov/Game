@@ -6,6 +6,15 @@
       <sourceFolder url="file://$MODULE_DIR$/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/.idea/tileRes" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/map" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/maptile" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/newres" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/newMap" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/newtile" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/resmap" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/resPlayer" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/sprite" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
