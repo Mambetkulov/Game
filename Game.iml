@@ -15,6 +15,7 @@
       <sourceFolder url="file://$MODULE_DIR$/.idea/resmap" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/.idea/resPlayer" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/.idea/sprite" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/photo" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
