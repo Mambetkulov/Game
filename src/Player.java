@@ -117,11 +117,12 @@ public class Player extends Entity{
 
              switch (objectName){
                  case "key":{
+                     gp.playSe(1);
                       haskey ++;
                       gp.obj[index] = null;
                       break;
                  }
-                 case "door":{
+                 case "Door":{
                      if(haskey > 0){
                          gp.obj[index] = null;
                          haskey--;
@@ -129,8 +130,21 @@ public class Player extends Entity{
                      break;
                  }
                  case "chest":{
+                     gp.playSe(1);
+                     gp.obj[index] = null;
                      break;
                  }
+                 case "tent":{
+                     gp.playSe(1);
+                     gp.obj[index] = null;
+                     break;
+                 }
+                 case "axe" :{
+                     gp.playSe(1);
+                     gp.obj[index] = null;
+                     break;
+                 }
+
              }
            }
     }
