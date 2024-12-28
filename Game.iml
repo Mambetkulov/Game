@@ -16,6 +16,10 @@
       <sourceFolder url="file://$MODULE_DIR$/.idea/resPlayer" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/.idea/sprite" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/.idea/photo" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/test" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/objects" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/music" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/mapset" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
