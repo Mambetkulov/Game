@@ -9,7 +9,8 @@ public class Sound {
     URL soundUrl[] = new URL[30];
 
     public Sound(){
-        soundUrl[0] = getClass().getResource("/musres/Playboi Carti - CANCUN [SEGA GENESIS].wav");
+        soundUrl[0] = getClass().getResource("/mus/mash-botoy--komuz.wav");
+        soundUrl[1] = getClass().getResource("/mus/mixkit-winning-a-coin-video-game-2069.wav");
 
     }
 
