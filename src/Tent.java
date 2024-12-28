@@ -4,7 +4,7 @@ import java.io.IOException;
 public class Tent extends SuperObject{
 
     public Tent(){
-        name = "key";
+        name = "Tent";
         try{
             image = ImageIO.read(getClass().getResourceAsStream("/objres/tent.png"));
         } catch (IOException e) {
