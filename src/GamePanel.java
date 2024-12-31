@@ -8,7 +8,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     final int tileSize = originalTileSize * scale;
     public final int maxScreenCol = 30;
-    public  final int maxScreenRow = 16;
+    public final int maxScreenRow = 16;
     public final int screenWidth = tileSize * maxScreenCol;
     public final int screenHeight = tileSize * maxScreenRow;
 
@@ -26,19 +26,19 @@ public class GamePanel extends JPanel implements Runnable {
     CollisionChecker cChecker = new CollisionChecker(this);
     AssetSetter aSetter = new AssetSetter(this);
     Thread threadGame;
-    Player player = new Player(this,key);
-    public SuperObject[] obj =  new SuperObject[10];
+    Player player = new Player(this, key);
+    public SuperObject[] obj = new SuperObject[10];
 
 
-    public GamePanel(){
-        this.setPreferredSize(new Dimension(screenWidth,screenHeight));
+    public GamePanel() {
+        this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
         this.addKeyListener(key);
         this.setFocusable(true);
     }
 
-    public void setupGame(){
+    public void setupGame() {
         aSetter.setObject();
 
         playMusic(0);
@@ -46,7 +46,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     }
 
-    public void startGameThread ( ){
+    public void startGameThread() {
         threadGame = new Thread(this);
         threadGame.start();
     }
@@ -54,22 +54,16 @@ public class GamePanel extends JPanel implements Runnable {
     @Override
     public void run() {
 
-        double interval = (double) 1000000000 /fps;
+        double interval = (double) 1000000000 / fps;
         double nextdrawTime = System.nanoTime() + interval;
 
-        while(threadGame != null){
-
-
-
+        while (threadGame != null) {
             update();
-
             repaint();
-
-
             try {
                 double remainTime = nextdrawTime - System.nanoTime();
-                remainTime = remainTime/1000000;
-                if(remainTime<0){
+                remainTime = remainTime / 1000000;
+                if (remainTime < 0) {
                     remainTime = 0;
                 }
                 Thread.sleep((long) remainTime);
@@ -80,23 +74,21 @@ public class GamePanel extends JPanel implements Runnable {
         }
     }
 
-
-
-    public void update (){
+    public void update() {
         player.update();
     }
 
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        Graphics2D g2 = (Graphics2D)g;
+        Graphics2D g2 = (Graphics2D) g;
 
         tileM.draw(g2);
 
-        for(int i = 0; i<obj.length ; i++){
-           if(obj[i] != null){
-               obj[i].draw(g2,this);
-           }
+        for (int i = 0; i < obj.length; i++) {
+            if (obj[i] != null) {
+                obj[i].draw(g2, this);
+            }
         }
 
         player.draw(g2);
@@ -104,17 +96,17 @@ public class GamePanel extends JPanel implements Runnable {
         g2.dispose();
     }
 
-    public void playMusic(int i){
+    public void playMusic(int i) {
         sound.setFile(i);
         sound.play();
         sound.loop();
     }
 
-    public void stopMusic(){
+    public void stopMusic() {
         sound.stop();
     }
 
-    public void playSe(int i){
+    public void playSe(int i) {
         sound.setFile(i);
         sound.play();
     }
