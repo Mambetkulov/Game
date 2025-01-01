@@ -6,7 +6,7 @@ import java.net.URL;
 public class Sound {
 
     Clip clip;
-    URL soundUrl[] = new URL[30];
+    URL[] soundUrl = new URL[30];
 
     public Sound(){
         soundUrl[0] = getClass().getResource("/mus/mash-botoy--komuz.wav");
@@ -20,7 +20,7 @@ public class Sound {
           clip = AudioSystem.getClip();
           clip.open(ais);
       }catch (Exception e){
-
+          System.out.println(" ");
       }
     }
 
@@ -29,7 +29,7 @@ public class Sound {
     }
 
     public void loop(){
-        clip.loop(clip.LOOP_CONTINUOUSLY);
+        clip.loop(Clip.LOOP_CONTINUOUSLY);
     }
 
     public void stop(){
