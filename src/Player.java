@@ -76,7 +76,7 @@ public class Player extends Entity{
 
           int objIndex =  gp.cChecker.checkObject(this,true);
             pickObject(objIndex);
-            if(collisionOn == false){
+            if(!collisionOn){
                 switch(direction){
                     case "up" : {
                         worldY -= speed;
@@ -129,22 +129,11 @@ public class Player extends Entity{
                      }
                      break;
                  }
-                 case "chest":{
+                 case "chest", "tent","axe":{
                      gp.playSe(1);
                      gp.obj[index] = null;
                      break;
                  }
-                 case "tent":{
-                     gp.playSe(1);
-                     gp.obj[index] = null;
-                     break;
-                 }
-                 case "axe" :{
-                     gp.playSe(1);
-                     gp.obj[index] = null;
-                     break;
-                 }
-
              }
            }
     }
