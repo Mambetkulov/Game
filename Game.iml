@@ -21,6 +21,7 @@
       <sourceFolder url="file://$MODULE_DIR$/.idea/music" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/.idea/mapset" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/.idea/musicR" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/tile" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

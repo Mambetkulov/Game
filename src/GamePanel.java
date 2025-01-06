@@ -15,8 +15,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     public final int maxWorldCol = 50;
     public final int maxWorldRow = 50;
-    public final int worldWidth = tileSize * maxWorldCol;
-    public final int worldHeight = tileSize * maxWorldRow;
+
 
     int fps = 60;
 
@@ -53,8 +52,8 @@ public class GamePanel extends JPanel implements Runnable {
 
     public void setupGame(){
         aSetter.setObject();
-        playMusic(0);
-        gameState = playState;
+        playMusic(2);
+        gameState = titleState;
 
 
 
@@ -124,20 +123,25 @@ public class GamePanel extends JPanel implements Runnable {
             drawStart = System.nanoTime();
         }
 
+        if(gameState == titleState){
+         ui.draw(g2);
+        }else{
+            tileM.draw(g2);
 
+            for(int i = 0; i<obj.length ; i++){
+                if(obj[i] != null){
+                    obj[i].draw(g2,this);
+                }
+            }
 
+            player.draw(g2);
 
-        tileM.draw(g2);
+            ui.draw(g2);
 
-        for(int i = 0; i<obj.length ; i++){
-           if(obj[i] != null){
-               obj[i].draw(g2,this);
-           }
         }
 
-        player.draw(g2);
 
-        ui.draw(g2);
+
         if(key.checkDrawTime){
             long drawEnd = System.nanoTime();
             long passed = drawEnd - drawStart;

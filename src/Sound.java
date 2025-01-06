@@ -11,6 +11,7 @@ public class Sound {
     public Sound(){
         soundUrl[0] = getClass().getResource("/mus/mash-botoy--komuz.wav");
         soundUrl[1] = getClass().getResource("/mus/mixkit-winning-a-coin-video-game-2069.wav");
+        soundUrl[2] = getClass().getResource("/mus/P5 OST 10 Encounter.wav");
 
     }
 
