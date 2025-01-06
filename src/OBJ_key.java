@@ -1,6 +1,7 @@
 import javax.imageio.ImageIO;
 import java.io.IOException;
 
+
 public class OBJ_key extends SuperObject{
 
     public OBJ_key(GamePanel gp){
