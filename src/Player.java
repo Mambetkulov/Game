@@ -29,7 +29,7 @@ public class Player extends Entity{
     public void setDefaultValues(){
         worldX = gp.tileSize * 23;
         worldY = gp.tileSize * 21;
-        speed = 6;
+        speed = 4;
         direction = "up";
     }
 
@@ -76,7 +76,7 @@ public class Player extends Entity{
 
           int objIndex =  gp.cChecker.checkObject(this,true);
             pickObject(objIndex);
-            if(!collisionOn){
+            if(collisionOn == false){
                 switch(direction){
                     case "up" : {
                         worldY -= speed;
@@ -129,7 +129,17 @@ public class Player extends Entity{
                      }
                      break;
                  }
-                 case "chest", "tent", "axe":{
+                 case "chest":{
+                     gp.playSe(1);
+                     gp.obj[index] = null;
+                     break;
+                 }
+                 case "tent":{
+                     gp.playSe(1);
+                     gp.obj[index] = null;
+                     break;
+                 }
+                 case "axe" :{
                      gp.playSe(1);
                      gp.obj[index] = null;
                      break;
