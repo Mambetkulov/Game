@@ -37,8 +37,6 @@ public class GamePanel extends JPanel implements Runnable {
     public final int pauseState = 2;
 
     public static GameClient socketClient;
-    private GameServer socketServer;
-
 
 
     public GamePanel(){
@@ -64,7 +62,7 @@ public class GamePanel extends JPanel implements Runnable {
         threadGame = new Thread(this);
         threadGame.start();
         if(JOptionPane.showConfirmDialog(this,"do you want to run the server") == 0){
-           socketServer = new GameServer(this);
+            GameServer socketServer = new GameServer(this);
            socketServer.start();
         }
         socketClient = new GameClient(this,"localhost");
@@ -75,7 +73,7 @@ public class GamePanel extends JPanel implements Runnable {
     @Override
     public void run() {
 
-        double interval = 1000000000/fps;
+        double interval = (double) 1000000000 /fps;
         double nextdrawTime = System.nanoTime() + interval;
 
 
