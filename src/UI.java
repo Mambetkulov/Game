@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.text.DecimalFormat;
 
 public class UI {
@@ -7,7 +8,7 @@ public class UI {
     Graphics2D g2;
     Font arial_40,arial_80B;
 
-
+    BufferedImage heart_full,heart_half,heart_blank;
     public boolean messageOn = false;
     public String message = " ";
     int messageCounter = 0;
@@ -22,8 +23,14 @@ public class UI {
         arial_40 = new Font("Comic Sans MS",Font.PLAIN,40);
         arial_80B = new Font("Comic Sans MS",Font.BOLD,80);
 
+        SuperObject heart = new OBJ_Heart(gp);
+        heart_full = heart.image3;
+        heart_half = heart.image2;
+        heart_blank = heart.image;
 
     }
+
+
 
     public void showMessage(String text){
         message = text;
@@ -40,11 +47,38 @@ public class UI {
     }
 
     if(gp.gameState == gp.playState){
+        drawPlayerLife();
 
     }if(gp.gameState == gp.pauseState){
           drawPauseScreen();
         }
 
+    }
+
+    public void drawPlayerLife(){
+        int x = gp.tileSize/2;
+        int y = gp.tileSize/2;
+        int i = 0;
+
+        while (i < gp.player.maxLife/2){
+            g2.drawImage(heart_blank,x,y,null);
+            i ++;
+            x += gp.tileSize;
+        }
+  // reset
+         x = gp.tileSize/2;
+         y = gp.tileSize/2;
+         i = 0;
+
+         while(i < gp.player.life){
+             g2.drawImage(heart_half,x,y,null);
+             i ++;
+             if(i < gp.player.life){
+                 g2.drawImage(heart_full,x,y,null);
+             }
+             i++;
+             x += gp.tileSize;
+         }
     }
 
     public void drawTitleScreen(){
