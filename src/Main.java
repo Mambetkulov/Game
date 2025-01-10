@@ -12,7 +12,6 @@ public class Main {
        window.setTitle("First Game");
        GamePanel gamePanel = new GamePanel();
        window.add(gamePanel);
-
        window.pack();
         window.setLocationRelativeTo(null);
        window.setVisible(true);
