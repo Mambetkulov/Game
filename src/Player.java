@@ -2,6 +2,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Objects;
 
 public class Player extends Entity{
 
@@ -29,7 +30,7 @@ public class Player extends Entity{
     public void setDefaultValues(){
         worldX = gp.tileSize * 23;
         worldY = gp.tileSize * 21;
-        speed = 4;
+        speed = 5;
         direction = "up";
         // player status
         maxLife = 6;
@@ -38,25 +39,17 @@ public class Player extends Entity{
 
     public void getPlayerImage(){
        try{
-           up1 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char11.png"));
-           up2 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char9.png"));
-           up3 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char12.png"));
-           up4 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char14.png"));
+           up1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char11.png")));
+           up2 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char9.png")));
 
-           down1 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char12.png"));
-           down2 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char2.png"));
-           down3 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char11.png"));
-           down4 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char10.png"));
+           down1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char12.png")));
+           down2 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char2.png")));
 
-           left1 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char4.png"));
-           left2 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char3.png"));
-           left3 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char5.png"));
-           left4 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char4.png"));
+           left1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char4.png")));
+           left2 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char3.png")));
 
-           right1 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char7.png"));
-           right2 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char6.png"));
-           right3 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char8.png"));
-           right4 = ImageIO.read(getClass().getResourceAsStream("/spriteRes/char7.png"));
+           right1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char7.png")));
+           right2 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char6.png")));
        } catch (IOException e) {
            e.printStackTrace();
        }
