@@ -97,10 +97,7 @@ public class Player extends Entity{
                 else if(spriteNum == 2){
                     spriteNum = 1;
                 }
-
                     spriteCounter = 0;
-
-
             }
 
         }
@@ -135,8 +132,6 @@ public class Player extends Entity{
     }
 
     public void draw (Graphics2D g2){
-//      g2.setColor(Color.GREEN);
-//      g2.fillRect(x,y,gp.tileSize,gp.tileSize);
         BufferedImage image = null;
         switch (direction){
             case "up":
@@ -146,10 +141,7 @@ public class Player extends Entity{
                 if(spriteNum == 2){
                     image = up2;
                 }
-
-
                 break;
-
             case "down":
                 if(spriteNum == 1){
                     image = down1;
@@ -157,9 +149,7 @@ public class Player extends Entity{
                 if(spriteNum == 2){
                     image = down2;
                 }
-
                 break;
-
             case "left":
                 if(spriteNum == 1){
                     image = left1;
@@ -167,9 +157,7 @@ public class Player extends Entity{
                 if(spriteNum == 2){
                     image = left2;
                 }
-
                 break;
-
             case "right" :
                 if(spriteNum == 1){
                     image = right1;
@@ -178,9 +166,7 @@ public class Player extends Entity{
                     image = right2;
                 }
                 break;
-
         }
-
         g2.drawImage(image,screenX,screenY,gp.tileSize,gp.tileSize,null);
     }
 }
