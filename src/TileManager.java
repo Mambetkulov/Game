@@ -26,7 +26,9 @@ public class TileManager {
 
 
         setup(0, "grass", false);
+
         setup(1, "stone", true);
+
         setup(2, "water", true);
         setup(3, "flowers", false);
         setup(4, "tree", true);
@@ -100,19 +102,11 @@ public class TileManager {
                 int screenY = worldY - gp.player.worldY + gp.player.screenY;
 
                 if (worldX + gp.tileSize > gp.player.worldX - gp.player.screenX &&
-
                         worldX - gp.tileSize < gp.player.worldX + gp.player.screenX &&
-
                         worldY + gp.tileSize > gp.player.worldY - gp.player.screenY &&
-
                         worldY - gp.tileSize < gp.player.worldY + gp.player.screenY)
-
-
-
-
                     g2.drawImage(tile[tileNum].image, screenX, screenY,  null);
                 wordlCol++;
-
 
                 if (wordlCol == gp.maxWorldCol) {
                     wordlCol = 0;
