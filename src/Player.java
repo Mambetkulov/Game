@@ -63,7 +63,7 @@ public class Player extends Entity{
                 direction = "down";
             }else if (keyh.leftPressed){
                 direction = "left";
-            }else if (keyh.rightPressed){
+            }else {
                 direction = "right";
             }
 
