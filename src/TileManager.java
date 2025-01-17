@@ -26,9 +26,7 @@ public class TileManager {
 
 
         setup(0, "grass", false);
-
         setup(1, "stone", true);
-
         setup(2, "water", true);
         setup(3, "flowers", false);
         setup(4, "tree", true);
