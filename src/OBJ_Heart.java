@@ -14,7 +14,7 @@ public class OBJ_Heart extends SuperObject{
             image2 = uTool.scaleImage(image2,gp.tileSize,gp.tileSize);
             image3 = uTool.scaleImage(image3,gp.tileSize,gp.tileSize);
         } catch (IOException e) {
-            System.out.println(" ");
+            System.out.println(" " + e.getMessage());
         }
     }
 }
