@@ -17,8 +17,8 @@ public class Player extends Entity{
         this.gp = gp;
         this.keyh = keyh;
 
-        screenX = gp.screenWidth/2 - (gp.tileSize/2);
-        screenY = gp.screenHeight/2 - (gp.tileSize/2);
+        screenX = gp.screenWidth / 2 - (gp.tileSize/2);
+        screenY = gp.screenHeight / 2 - (gp.tileSize/2);
 
         solidArea = new Rectangle(8,16,32,32);
         solidAreaDefaultX = solidArea.x;
@@ -91,7 +91,7 @@ public class Player extends Entity{
             }
             spriteCounter ++;
             if(spriteCounter > 12){
-                if(spriteNum ==1){
+                if(spriteNum == 1){
                     spriteNum = 2;
                 }
                 else if(spriteNum == 2){
@@ -138,6 +138,7 @@ public class Player extends Entity{
                 if(spriteNum == 1){
                     image = up1;
                 }
+
                 if(spriteNum == 2){
                     image = up2;
                 }
