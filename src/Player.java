@@ -143,6 +143,7 @@ public class Player extends Entity{
                     image = up2;
                 }
                 break;
+
             case "down":
                 if(spriteNum == 1){
                     image = down1;
