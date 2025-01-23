@@ -146,6 +146,7 @@ public class Player extends Entity{
 
                     image = up2;
 
+
                 }
 
                 break;
