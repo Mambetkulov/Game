@@ -142,6 +142,8 @@ public class Player extends Entity{
 
 
                 if(spriteNum == 2){
+
+
                     image = up2;
 
                 }
