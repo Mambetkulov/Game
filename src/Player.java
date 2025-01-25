@@ -33,6 +33,7 @@ public class Player extends Entity{
         speed = 5;
         direction = "up";
         // player status
+
         maxLife = 6;
         life = maxLife;
     }
