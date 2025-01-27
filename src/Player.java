@@ -39,6 +39,7 @@ public class Player extends Entity{
 
         life = maxLife;
 
+
     }
 
     public void getPlayerImage(){
