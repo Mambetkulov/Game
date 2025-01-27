@@ -36,6 +36,7 @@ public class Player extends Entity{
 
         maxLife = 6;
 
+
         life = maxLife;
 
     }
