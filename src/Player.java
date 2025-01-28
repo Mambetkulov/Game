@@ -62,6 +62,7 @@ public class Player extends Entity{
        }
     }
 
+
     public void update(){
         if(keyh.upPressed || keyh.downPressed || keyh.leftPressed || keyh.rightPressed){
             if(keyh.upPressed){
