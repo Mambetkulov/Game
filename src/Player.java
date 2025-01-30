@@ -69,14 +69,12 @@ public class Player extends Entity{
         if(keyh.upPressed || keyh.downPressed || keyh.leftPressed || keyh.rightPressed){
             if(keyh.upPressed){
                 direction = "up";
-
             }else if (keyh.downPressed){
                 direction = "down";
             }else if (keyh.leftPressed){
                 direction = "left";
 
             }else {
-
                 direction = "right";
             }
 
@@ -88,7 +86,9 @@ public class Player extends Entity{
             if(!collisionOn){
                 switch(direction){
                     case "up" : {
+
                         worldY -= speed;
+
                         break;
                     } case "down":{
                         worldY += speed;
