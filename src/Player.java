@@ -94,6 +94,7 @@ public class Player extends Entity{
                     } case "down":{
                         worldY += speed;
                         break;
+
                     } case "left" :{
                         worldX -= speed;
                         break;
