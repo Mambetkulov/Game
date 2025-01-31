@@ -117,8 +117,6 @@ public class Player extends Entity{
             }
 
         }
-
-
     }
     public void pickObject(int index){
            if(index != 999){
