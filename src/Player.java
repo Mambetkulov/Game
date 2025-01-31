@@ -94,8 +94,6 @@ public class Player extends Entity {
             }
 
         }
-
-
     }
 
     public void pickObject(int index) {
