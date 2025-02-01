@@ -86,23 +86,14 @@ public class Player extends Entity{
             pickObject(objIndex);
             if(!collisionOn){
                 switch(direction){
-                    case "up" : {
-
+                    case "up" ->
                         worldY -= speed;
-
-                        break;
-                    } case "down":{
+                     case "down"->
                         worldY += speed;
-                        break;
-
-                    } case "left" :{
+                     case "left" ->
                         worldX -= speed;
-                        break;
-
-                    } case "right" :{
+                    case "right" ->
                         worldX += speed;
-                        break;
-                    }
                 }
             }
             spriteCounter ++;
@@ -152,22 +143,10 @@ public class Player extends Entity{
                 if(spriteNum == 1){
                     image = up1;
                 }
-
-
-
                 if(spriteNum == 2){
-
-
                     image = up2;
-
-
                 }
-
                 break;
-
-
-
-
             case "down":
 
                 if(spriteNum == 1){
