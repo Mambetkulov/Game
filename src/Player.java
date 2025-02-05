@@ -78,6 +78,7 @@ public class Player extends Entity {
                 direction = "right";
             }
 
+
             collisionOn = false;
 
             gp.cChecker.checkTile(this);
