@@ -83,7 +83,6 @@ public class Player extends Entity {
             pickObject(objIndex);
             if (!collisionOn) {
                 switch (direction) {
-
                     case "up" -> worldY -= speed;
                     case "down" -> worldY += speed;
                     case "left" -> worldX -= speed;
@@ -95,6 +94,7 @@ public class Player extends Entity {
                 if (spriteNum == 1) {
                     spriteNum = 2;
                 } else if (spriteNum == 2) {
+
                     spriteNum = 1;
                 }
                 spriteCounter = 0;
