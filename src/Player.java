@@ -145,6 +145,7 @@ public class Player extends Entity {
                 if (spriteNum == 1) {
                     image = down1;
                 }
+
                 if (spriteNum == 2) {
                     image = down2;
                 }
