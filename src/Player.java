@@ -148,7 +148,6 @@ public class Player extends Entity {
                     image = down2;
 
                 }
-
                 break;
             case "left":
                 if (spriteNum == 1) {
