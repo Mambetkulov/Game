@@ -11,6 +11,7 @@ public class Tent extends SuperObject{
             uTool.scaleImage(image,gp.tileSize,gp.tileSize);
         } catch (IOException e) {
             e.printStackTrace();
+
         }
     }
 }
