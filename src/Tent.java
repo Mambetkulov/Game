@@ -15,4 +15,5 @@ public class Tent extends SuperObject{
             e.printStackTrace();
         }
     }
+
 }
