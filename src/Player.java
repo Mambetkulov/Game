@@ -101,6 +101,7 @@ public class Player extends Entity {
             String objectName = gp.obj[index].name;
 
             switch (objectName) {
+
                 case "key": {
                     gp.playSe(1);
                     haskey++;
