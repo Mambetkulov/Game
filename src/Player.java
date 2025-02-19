@@ -106,10 +106,8 @@ public class Player extends Entity {
                     haskey++;
                     gp.obj[index] = null;
                     break;
-
                 }
                 case "Door": {
-
                     if (haskey > 0) {
                         gp.obj[index] = null;
                         haskey--;
