@@ -77,7 +77,9 @@ public class Player extends Entity {
             if (!collisionOn) {
                 switch (direction) {
                     case "up" -> worldY -= speed;
+
                     case "down" -> worldY += speed;
+
                     case "left" -> worldX -= speed;
                     case "right" -> worldX += speed;
                 }
