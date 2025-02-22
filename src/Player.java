@@ -95,10 +95,10 @@ public class Player extends Entity {
         }
     }
 
-
     public void pickObject(int index) {
         if (index != 999) {
             String objectName = gp.obj[index].name;
+
 
             switch (objectName) {
                 case "key": {
