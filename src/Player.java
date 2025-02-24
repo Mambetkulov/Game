@@ -116,6 +116,7 @@ public class Player extends Entity {
                 }
                 case "chest", "tent", "axe": {
                     gp.playSe(1);
+
                     gp.obj[index] = null;
                     break;
                 }
