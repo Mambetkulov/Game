@@ -116,14 +116,12 @@ public class Player extends Entity {
                 }
                 case "chest", "tent", "axe": {
                     gp.playSe(1);
-
                     gp.obj[index] = null;
                     break;
                 }
             }
         }
     }
-
     public void draw(Graphics2D g2) {
         BufferedImage image = null;
         switch (direction) {
