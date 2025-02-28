@@ -2,10 +2,9 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.Objects;
 
-public class Player extends Entity{
 
+public class Player extends Entity {
     GamePanel gp;
     Keyb keyh;
 
@@ -42,24 +41,24 @@ public class Player extends Entity{
 
     public void getPlayerImage(){
 
-       up1 = setup("char11");
-       up2 = setup("char9");
-       down1 = setup("char12");
-       down2 = setup("char2");
-       left1 = setup("char4");
-       left2 = setup("char3");
-       right1 = setup("char7");
-       right2 = setup("char6");
+        up1 = setup("char11");
+        up2 = setup("char9");
+        down1 = setup("char12");
+        down2 = setup("char2");
+        left1 = setup("char4");
+        left2 = setup("char3");
+        right1 = setup("char7");
+        right2 = setup("char6");
     }
 
     public BufferedImage setup (String imageName){
         UtilityTool uTool = new UtilityTool();
         BufferedImage image = null;
         try{
-           image = ImageIO.read(getClass().getResourceAsStream("/spriteRes/" + imageName + ".png"));
-           image = uTool.scaleImage(image,gp.tileSize,gp.tileSize);
+            image = ImageIO.read(getClass().getResourceAsStream("/spriteRes/" + imageName + ".png"));
+            image = uTool.scaleImage(image,gp.tileSize,gp.tileSize);
         } catch (IOException e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
         return image;
     }
@@ -79,7 +78,7 @@ public class Player extends Entity{
             collisionOn = false;
             gp.cChecker.checkTile(this);
 
-          int objIndex =  gp.cChecker.checkObject(this,true);
+            int objIndex =  gp.cChecker.checkObject(this,true);
             pickObject(objIndex);
             if(!collisionOn){
                 switch(direction){
@@ -106,7 +105,7 @@ public class Player extends Entity{
                 else if(spriteNum == 2){
                     spriteNum = 1;
                 }
-                    spriteCounter = 0;
+                spriteCounter = 0;
             }
 
         }
@@ -114,30 +113,30 @@ public class Player extends Entity{
 
     }
     public void pickObject(int index){
-           if(index != 999){
-             String objectName = gp.obj[index].name;
+        if(index != 999){
+            String objectName = gp.obj[index].name;
 
-             switch (objectName){
-                 case "key":{
-                     gp.playSe(1);
-                      haskey ++;
-                      gp.obj[index] = null;
-                      break;
-                 }
-                 case "Door":{
-                     if(haskey > 0){
-                         gp.obj[index] = null;
-                         haskey--;
-                     }
-                     break;
-                 }
-                 case "chest", "tent","axe":{
-                     gp.playSe(1);
-                     gp.obj[index] = null;
-                     break;
-                 }
-             }
-           }
+            switch (objectName){
+                case "key":{
+                    gp.playSe(1);
+                    haskey ++;
+                    gp.obj[index] = null;
+                    break;
+                }
+                case "Door":{
+                    if(haskey > 0){
+                        gp.obj[index] = null;
+                        haskey--;
+                    }
+                    break;
+                }
+                case "chest", "tent","axe":{
+                    gp.playSe(1);
+                    gp.obj[index] = null;
+                    break;
+                }
+            }
+        }
     }
 
     public void draw (Graphics2D g2){
