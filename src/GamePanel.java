@@ -15,6 +15,8 @@ public class GamePanel extends JPanel implements Runnable {
 
     public final int maxWorldCol = 50;
     public final int maxWorldRow = 50;
+    public final int maxMap = 10;
+    public int currentMap = 0;
 
 
     int fps = 60;
@@ -105,8 +107,6 @@ public class GamePanel extends JPanel implements Runnable {
     public void update (){
         if(gameState == playState){
             player.update();
-        }if(gameState == pauseState){
-
         }
 
     }
