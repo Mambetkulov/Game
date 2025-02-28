@@ -11,10 +11,13 @@ public class Player extends Entity{
 
     public final int screenX;
     public final int screenY;
+    int standCounter = 0;
     int haskey = 0;
 
     public Player(GamePanel gp, Keyb keyh){
-        this.gp = gp;
+        super(gp);
+
+
         this.keyh = keyh;
 
         screenX = gp.screenWidth/2 - (gp.tileSize/2);
@@ -38,21 +41,27 @@ public class Player extends Entity{
     }
 
     public void getPlayerImage(){
-       try{
-           up1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char11.png")));
-           up2 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char9.png")));
 
-           down1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char12.png")));
-           down2 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char2.png")));
+       up1 = setup("char11");
+       up2 = setup("char9");
+       down1 = setup("char12");
+       down2 = setup("char2");
+       left1 = setup("char4");
+       left2 = setup("char3");
+       right1 = setup("char7");
+       right2 = setup("char6");
+    }
 
-           left1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char4.png")));
-           left2 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char3.png")));
-
-           right1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char7.png")));
-           right2 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char6.png")));
-       } catch (IOException e) {
+    public BufferedImage setup (String imageName){
+        UtilityTool uTool = new UtilityTool();
+        BufferedImage image = null;
+        try{
+           image = ImageIO.read(getClass().getResourceAsStream("/spriteRes/" + imageName + ".png"));
+           image = uTool.scaleImage(image,gp.tileSize,gp.tileSize);
+        } catch (IOException e) {
            e.printStackTrace();
-       }
+        }
+        return image;
     }
 
     public void update(){
@@ -167,6 +176,6 @@ public class Player extends Entity{
                 }
                 break;
         }
-        g2.drawImage(image,screenX,screenY,gp.tileSize,gp.tileSize,null);
+        g2.drawImage(image,screenX,screenY,null);
     }
 }
