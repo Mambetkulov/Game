@@ -1,6 +1,4 @@
-import javax.imageio.ImageIO;
-import java.io.IOException;
-import java.util.Objects;
+import java.util.Random;
 
 public class NPC_old_men  extends Entity{
 
@@ -8,27 +6,46 @@ public class NPC_old_men  extends Entity{
         super(gp);
         direction = "down";
         speed = 1;
+        getImage();
 
     }
 
-    public void getPlayerImage(){
-        try{
+    public void getImage(){
 
-            up1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char11.png")));
-            up2 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char9.png")));
+        up1 = setup("/npc/oldman_up_1");
+        up2 = setup("/npc/oldman_up_2");
+        down1 = setup("/npc/oldman_down_1");
+        down2 = setup("/npc/oldman_down_2");
+        left1 = setup("/npc/oldman_left_1");
+        left2 = setup("/npc/oldman_left_2");
+        right1 = setup("/npc/oldman_right_1");
+        right2 = setup("/npc/oldman_right_2");
+    }
 
-            down1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char12.png")));
-            down2 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char2.png")));
+    public void setAction(){
 
-            left1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char4.png")));
-            left2 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char3.png")));
+        actionLockCounter ++;
+        if(actionLockCounter == 120){
+            Random random = new Random();
+            int i = random.nextInt(100) + 1; // pick up number from 1 to 100
 
-            right1 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char7.png")));
-            right2 = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/spriteRes/char6.png")));
-        } catch (IOException e) {
-            e.printStackTrace();
+            if(i<= 25){
+                direction = "up";
+            }
+            if(i > 25 && i <= 50){
+                direction = "down";
+            }
+            if(i > 50 && i <= 75){
+                direction = "left";
+            }
+            if(i > 75 && i <= 100){
+                direction = "right";
+            }
+
+            actionLockCounter = 0;
         }
     }
+
 
 
 

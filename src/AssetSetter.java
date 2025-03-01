@@ -25,4 +25,10 @@ public class AssetSetter {
         gp.obj[3].worldY = 9 * gp.tileSize;
 
     }
+
+    public void setNPC(){
+        gp.npc[0] = new NPC_old_men(gp);
+        gp.npc[0].worldX = gp.tileSize * 24;
+        gp.npc[0].worldY = gp.tileSize * 21;
+    }
 }
