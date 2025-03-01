@@ -2,9 +2,10 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Objects;
 
+public class Player extends Entity{
 
-public class Player extends Entity {
     GamePanel gp;
     Keyb keyh;
 
@@ -16,7 +17,7 @@ public class Player extends Entity {
     public Player(GamePanel gp, Keyb keyh){
         super(gp);
 
-
+        this.gp = gp;
         this.keyh = keyh;
 
         screenX = gp.screenWidth/2 - (gp.tileSize/2);
@@ -41,27 +42,17 @@ public class Player extends Entity {
 
     public void getPlayerImage(){
 
-        up1 = setup("char11");
-        up2 = setup("char9");
-        down1 = setup("char12");
-        down2 = setup("char2");
-        left1 = setup("char4");
-        left2 = setup("char3");
-        right1 = setup("char7");
-        right2 = setup("char6");
+        up1 = setup("/spriteRes/char11");
+        up2 = setup("/spriteRes/char9");
+        down1 = setup("/spriteRes/char12");
+        down2 = setup("/spriteRes/char2");
+        left1 = setup("/spriteRes/char4");
+        left2 = setup("/spriteRes/char3");
+        right1 = setup("/spriteRes/char7");
+        right2 = setup("/spriteRes/char6");
     }
 
-    public BufferedImage setup (String imageName){
-        UtilityTool uTool = new UtilityTool();
-        BufferedImage image = null;
-        try{
-            image = ImageIO.read(getClass().getResourceAsStream("/spriteRes/" + imageName + ".png"));
-            image = uTool.scaleImage(image,gp.tileSize,gp.tileSize);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return image;
-    }
+
 
     public void update(){
         if(keyh.upPressed || keyh.downPressed || keyh.leftPressed || keyh.rightPressed){
@@ -77,6 +68,10 @@ public class Player extends Entity {
 
             collisionOn = false;
             gp.cChecker.checkTile(this);
+
+            //check npc collision
+            int npcIndex = gp.cChecker.checkEntity(this,gp.npc);
+            interactNPC(npcIndex);
 
             int objIndex =  gp.cChecker.checkObject(this,true);
             pickObject(objIndex);
@@ -138,6 +133,13 @@ public class Player extends Entity {
             }
         }
     }
+
+    public void  interactNPC(int i){
+        if(i != 999){
+            System.out.println("you are hitting a  npc!");
+        }
+    }
+
 
     public void draw (Graphics2D g2){
         BufferedImage image = null;
