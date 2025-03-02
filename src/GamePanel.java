@@ -22,7 +22,7 @@ public class GamePanel extends JPanel implements Runnable {
     int fps = 60;
 
     TileManager tileM = new TileManager(this);
-    Keyb key = new Keyb(this);
+    public Keyb key = new Keyb(this);
     Sound music = new Sound();
     Sound sf = new Sound();
 
@@ -39,6 +39,7 @@ public class GamePanel extends JPanel implements Runnable {
     public final int titleState =0;
     public final int playState = 1;
     public final int pauseState = 2;
+    public final int dialogueState = 3;
 
     public static GameClient socketClient;
 

@@ -7,6 +7,7 @@ public class NPC_old_men  extends Entity{
         direction = "down";
         speed = 1;
         getImage();
+        setDialougue();
 
     }
 
@@ -20,6 +21,14 @@ public class NPC_old_men  extends Entity{
         left2 = setup("/npc/oldman_left_2");
         right1 = setup("/npc/oldman_right_1");
         right2 = setup("/npc/oldman_right_2");
+    }
+
+    public void setDialougue(){
+        dialogues[0] = "hello bro";
+        dialogues[1] = "baiel jindi";
+        dialogues[2] = "emne kerek saga";
+        dialogues[3] = "jogol";
+
     }
 
     public void setAction(){
@@ -46,7 +55,10 @@ public class NPC_old_men  extends Entity{
         }
     }
 
-
+    public void speak(){
+        // do the character specific stuff
+       super.speak();
+    }
 
 
 }
