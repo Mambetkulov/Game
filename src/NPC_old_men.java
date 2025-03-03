@@ -25,9 +25,9 @@ public class NPC_old_men  extends Entity{
 
     public void setDialougue(){
         dialogues[0] = "hello bro";
-        dialogues[1] = "baiel jindi";
-        dialogues[2] = "emne kerek saga";
-        dialogues[3] = "jogol";
+        dialogues[1] = "jigit janagy juktardu oltyr";
+        dialogues[2] = "andan kiyn vampirdi oltyr";
+        dialogues[3] = "andan son podvalga tush";
 
     }
 
