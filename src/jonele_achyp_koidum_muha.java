@@ -5,8 +5,5 @@ public class jonele_achyp_koidum_muha {
         for (int i = 0; i < 2; i++) {
             System.out.println(a);
         }
-
     }
-
-
 }
