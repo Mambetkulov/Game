@@ -12,6 +12,8 @@ public class jonele_achyp_koidum_muha {
         System.out.println("what");
         System.out.println("hello");
         System.out.println("bro");
+        System.out.println("hag");
+
 
 
     }
