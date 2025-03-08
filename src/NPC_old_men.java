@@ -29,6 +29,7 @@ public class NPC_old_men  extends Entity{
         dialogues[2] = "emne kerek saga";
         dialogues[3] = "jogol";
 
+
     }
 
     public void setAction(){
