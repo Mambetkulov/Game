@@ -219,7 +219,6 @@ public class CollisionChecker {
                 entity.solidArea.x += entity.speed;
                 if(entity.solidArea.intersects(gp.player.solidArea)){
                     entity.collisionOn = true;
-
                 }
                 break;
             }
