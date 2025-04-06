@@ -21,20 +21,13 @@ public class TileManager {
         getTileImage();
         loadMap("/maps/world01.txt");
     }
-
-
-
     public void getTileImage () {
-
-
         setup(0, "grass", false);
         setup(1, "stone", true);
         setup(2, "water", true);
         setup(3, "flowers", false);
         setup(4, "tree", true);
         setup(5, "road", false);
-
-
     }
 
     public void setup(int index , String imageName,boolean collision){
@@ -90,8 +83,6 @@ public class TileManager {
             g2.drawImage(tile[0].image, gp.maxScreenCol, gp.maxScreenRow, gp.tileSize, gp.tileSize, null);
             wordlCol++;
             wordlCol += gp.tileSize;
-
-
             while (wordlCol < gp.maxWorldCol && worldRow < gp.maxWorldRow) {
 
                 int tileNum = mapTileNum[wordlCol][worldRow];
@@ -112,8 +103,6 @@ public class TileManager {
                     wordlCol = 0;
 
                     worldRow++;
-
-
                 }
             }
 
