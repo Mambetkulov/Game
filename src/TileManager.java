@@ -24,6 +24,8 @@ public class TileManager {
         loadMap("/maps/interior01.txt",1);
     }
 
+
+
     public void getTileImage () {
 
 
