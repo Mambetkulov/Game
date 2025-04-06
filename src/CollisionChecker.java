@@ -230,3 +230,4 @@ public class CollisionChecker {
         gp.player.solidArea.y = gp.player.SolidAreaDefaultY;
     }
 }
+
