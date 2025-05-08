@@ -86,7 +86,6 @@ public class TileManager {
             System.out.println(" ");
         }
     }
-
     public void draw(Graphics2D g2) {
 
         int wordlCol = 0;
