@@ -109,14 +109,6 @@ public class TileManager {
 
 
 
-
-
-
-
-
-
-
-
                 if (wordlCol == gp.maxWorldCol) {
                     wordlCol = 0;
 
