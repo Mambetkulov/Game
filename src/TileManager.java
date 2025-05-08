@@ -93,12 +93,8 @@ public class TileManager {
             g2.drawImage(tile[0].image, gp.maxScreenCol, gp.maxScreenRow, gp.tileSize, gp.tileSize, null);
             wordlCol++;
             wordlCol += gp.tileSize;
-
-
             while (wordlCol < gp.maxWorldCol && worldRow < gp.maxWorldRow) {
-
                 int tileNum = mapTileNum[gp.currentMap][wordlCol][worldRow];
-
                 int worldX = wordlCol * gp.tileSize;
                 int worldY = worldRow * gp.tileSize;
                 int screenX = worldX - gp.player.worldX + gp.player.screenX;
@@ -115,8 +111,6 @@ public class TileManager {
                     wordlCol = 0;
 
                     worldRow++;
-
-
                 }
             }
 
