@@ -87,11 +87,8 @@ public class TileManager {
         }
     }
     public void draw(Graphics2D g2) {
-
         int wordlCol = 0;
         int worldRow = 0;
-
-
         while (wordlCol < gp.maxScreenCol && worldRow < gp.maxScreenRow) {
             g2.drawImage(tile[0].image, gp.maxScreenCol, gp.maxScreenRow, gp.tileSize, gp.tileSize, null);
             wordlCol++;
