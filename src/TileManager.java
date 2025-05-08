@@ -92,7 +92,6 @@ public class TileManager {
             wordlCol++;
             wordlCol += gp.tileSize;
 
-
             while (wordlCol < gp.maxWorldCol && worldRow < gp.maxWorldRow) {
 
                 int tileNum = mapTileNum[wordlCol][worldRow];
