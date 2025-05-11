@@ -106,9 +106,6 @@ public class TileManager {
                         worldY - gp.tileSize < gp.player.worldY + gp.player.screenY)
                     g2.drawImage(tile[tileNum].image, screenX, screenY,  null);
                 wordlCol++;
-
-
-
                 if (wordlCol == gp.maxWorldCol) {
                     wordlCol = 0;
 
