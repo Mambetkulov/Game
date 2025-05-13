@@ -29,6 +29,7 @@ public class NPC_old_men  extends Entity{
         dialogues[2] = "andan kiyn vampirdi oltyr";
         dialogues[3] = "andan son podvalga tush";
 
+
     }
 
     public void setAction(){
