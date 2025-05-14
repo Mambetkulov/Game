@@ -43,7 +43,6 @@ public class TileManager {
 
 
     }
-
     public void setup(int index , String imageName,boolean collision){
         UtilityTool uTool = new UtilityTool();
         try{
