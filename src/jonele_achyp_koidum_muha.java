@@ -6,4 +6,9 @@ public class jonele_achyp_koidum_muha {
     public jonele_achyp_koidum_muha() {
     }
 
+    public jonele_achyp_koidum_muha(String jon, int age, boolean a) {
+        this.jon = jon;
+        this.age = age;
+        this.a = a;
+    }
 }
