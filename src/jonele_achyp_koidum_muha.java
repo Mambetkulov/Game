@@ -10,6 +10,18 @@ public class jonele_achyp_koidum_muha {
         this.a = a;
     }
 
+    public void setJon(String jon) {
+        this.jon = jon;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setA(boolean a) {
+        this.a = a;
+    }
+
     public String getJon() {
         return jon;
     }
