@@ -33,4 +33,13 @@ public class jonele_achyp_koidum_muha {
     public boolean isA() {
         return a;
     }
+
+    @Override
+    public String toString() {
+        return "jonele_achyp_koidum_muha{" +
+                "jon='" + jon + '\'' +
+                ", age=" + age +
+                ", a=" + a +
+                '}';
+    }
 }
