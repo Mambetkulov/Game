@@ -1,4 +1,28 @@
 public class Aiibek {
+ //todo day 1 Hi Aibek .
+    // todo day 2 hi Baiel
+ public static void main(String[] args) {
+
+     int a = 5;
+     int b = 6;
+     System.out.println("a+b = " + a + b);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      int v =a++ + b++ + ++a+ +a +(a+b);
+ }
 
 }
 
