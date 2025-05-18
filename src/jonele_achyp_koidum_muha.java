@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class jonele_achyp_koidum_muha {
     private String jon ;
     private int age;
@@ -32,6 +34,18 @@ public class jonele_achyp_koidum_muha {
 
     public boolean isA() {
         return a;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        jonele_achyp_koidum_muha that = (jonele_achyp_koidum_muha) o;
+        return age == that.age && a == that.a && Objects.equals(jon, that.jon);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(jon, age, a);
     }
 
     @Override
