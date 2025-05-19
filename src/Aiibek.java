@@ -10,16 +10,7 @@ public class Aiibek {
 
      int v =a++ + b++ + ++a+ +a +(a+b);
      System.out.println(v);
-
-
-
-
-
-
-
-
-
-
+     System.out.println("Aibek");
 
 
 
