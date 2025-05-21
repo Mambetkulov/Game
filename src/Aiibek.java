@@ -13,6 +13,7 @@ public class Aiibek {
      System.out.println("Aibek");
      System.out.println("BAIEL");
      System.out.println("BAIEL");
+     System.out.println("BAIEL");
 
 
 
