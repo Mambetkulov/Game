@@ -15,8 +15,9 @@ public class Aiibek {
      System.out.println("BAIEL");
      System.out.println("BAIEL");
      System.out.println("BAIEL");
-     System.out.println("BAIEL");п
-     
+     System.out.println("BAIEL");
+     System.out.println("BAIEL");
+
 
 
 
