@@ -37,6 +37,10 @@ public class jonele_achyp_koidum_muha {
         return a;
     }
 
+    public int getBosh(){
+        return bosh;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
