@@ -7,6 +7,7 @@ public class jonele_achyp_koidum_muha {
     private int bosh = 2;
     int aa=2;
     int aaa=2;
+    int b=2;
     public jonele_achyp_koidum_muha() {
     }
     public jonele_achyp_koidum_muha(String jon, int age, boolean a) {
