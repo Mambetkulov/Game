@@ -9,6 +9,7 @@ public class jonele_achyp_koidum_muha {
     int aaa=2;
     int b=2;
     int bb=2;
+    int ss=3;
     int s=2;
     public jonele_achyp_koidum_muha() {
     }
