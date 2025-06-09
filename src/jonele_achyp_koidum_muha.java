@@ -11,7 +11,7 @@ public class jonele_achyp_koidum_muha {
     int bb=2;
     int ss=3;
     int s=2;
-    int q=2;
+    int qq=2;
     int qd=2;
     int qdd=2;
     public jonele_achyp_koidum_muha() {
