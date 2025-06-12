@@ -146,6 +146,7 @@ public class Aiibek {
      System.out.println("BAIEL");
      System.out.println("BAIEL");
      System.out.println("BAIEL");
+     System.out.println("BAIEL");
 
 
 
