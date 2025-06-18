@@ -21,6 +21,7 @@ public class jonele_achyp_koidum_muha {
     int f = 3;
     int ff = 3;
     int fff = 3;
+    int ffff = 3;
     public jonele_achyp_koidum_muha() {
     }
     public jonele_achyp_koidum_muha(String jon, int age, boolean a) {
